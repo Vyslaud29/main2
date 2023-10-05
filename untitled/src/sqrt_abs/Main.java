@@ -77,6 +77,7 @@ package sqrt_abs;//package sqrt_abs;
 //        System.out.println(imie);
 
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -84,7 +85,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Jakie działanie chcesz wykonać:");
+
+        System.out.println("Jakie działanie chcesz wykonac:");
         System.out.println("1. Dodawanie");
         System.out.println("2. Odejmowanie");
         System.out.println("3. Mnożenie");
@@ -92,6 +94,8 @@ public class Main {
         System.out.println("5. Potęgowanie");
         System.out.println("6. Pierwiastkowanie");
         System.out.println("7. Modulo");
+
+
 
         int wybor = scanner.nextInt();
         double a, b, wynik = 0.0;
