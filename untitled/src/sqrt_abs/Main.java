@@ -1,6 +1,7 @@
 package sqrt_abs;
 import java.util.Scanner;
 
+import static java.lang.Math.max;
 import static java.lang.Math.pow;
 import static java.lang.System.in;
 
@@ -12,7 +13,6 @@ public class Main {
 
             Double a, b, wynik = null;
             int wybor;
-        
 
             System.out.println("jakie dzialanie chcesz wykonac :" );
             System.out.println("1. dodawanie ");
@@ -21,6 +21,7 @@ public class Main {
             System.out.println("4. dzielenie");
             System.out.println("5. Potęgowanie");
             System.out.println("6. Pierwiastkowanie");
+            System.out.println("7. Modulo");
 
             Scanner scanner = new Scanner(in);
             wybor = scanner.nextInt();
@@ -84,9 +85,17 @@ public class Main {
                 case 6:
                     System.out.println("Podaj 1 liczbe: ");
                     a = scanner.nextDouble();
-                    System.out.println("Podaj stopien pierwiastka ");
+                    wynik = Math.sqrt(a);
+                    System.out.println("Wynik wynosi: " +wynik);
+                    scanner.close();
+                    break;
+
+                case 7:
+                    System.out.println("Podaj 1 liczbe: ");
+                    a = scanner.nextDouble();
+                    System.out.println("Podaj 2 liczbe: ");
                     b = scanner.nextDouble();
-                    wynik =pow(a,b);
+                    wynik = a%b;
                     System.out.println("Wynik wynosi: " +wynik);
                     scanner.close();
                     break;
