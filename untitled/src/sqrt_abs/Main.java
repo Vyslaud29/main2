@@ -107,13 +107,13 @@ public class Main {
 
         switch (wybor) {
             case 1:
-                wynik = a + b;
+                wynik = dodawanie(a, b);
                 break;
             case 2:
-                wynik = a - b;
+                wynik = odejmowanie(a, b);
                 break;
             case 3:
-                wynik = a * b;
+                wynik = mnozenie(a, b);
                 break;
             case 4:
                 if (b == 0) {
@@ -121,20 +121,50 @@ public class Main {
                     scanner.close();
                     return;
                 }
-                wynik = a / b;
+                wynik = dzielenie(a,b);
                 break;
             case 5:
-                wynik = Math.pow(a, b);
+                wynik = potegowanie(Math.pow(a, b));
                 break;
             case 6:
-                wynik = Math.sqrt(a);
+                wynik = pierwiastkowanie(Math.sqrt(a));
                 break;
             case 7:
-                wynik = a % b;
+                wynik = modulo(a,b);
                 break;
         }
 
         System.out.println("wynik wynosi: " + wynik);
         scanner.close();
+
+
+
+
+
+
+    }
+
+    private static double modulo(double a, double b) {
+        return a%b;
+    };
+
+    private static double pierwiastkowanie(double sqrt) {
+        return Math.sqrt(a);
+    };
+
+    private static double potegowanie(double pow) {
+       return Math.pow(a, b);
+    }
+
+    private static double dzielenie(double a, double b) {return a / b;
+    }
+
+    private static double mnozenie(double a, double b) {return a * b;
+    }
+
+    private static double odejmowanie(double a, double b) {return a - b;
+    }
+
+    private static double dodawanie(double a, double b) {return a + b;
     }
 }
