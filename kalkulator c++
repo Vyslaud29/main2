@@ -1,0 +1,65 @@
+
+// Online IDE - Code Editor, Compiler, Interpreter
+
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+    double a, b, wynik;
+    int wybor;
+    
+    cout << "jakie dzialanie chcesz wykonac :" << endl 
+    << "1> dodawanie " << endl <<
+    "2. odejmowanie" << endl<<
+    "3. mnozenie" << endl<< 
+    "4. dzielenie" << endl <<
+    "5, pierwiastkowanie" << endl <<
+    "6. potegowanie"<<endl;
+    
+    cin >> wybor;
+    switch(wybor)
+    {
+        case 1:
+        cout << endl << "podaj liczby ktore chcesz dodac: " <<endl;
+        cin >> a >> b;
+        wynik = a+b;
+        break;
+        case 2:
+        cout << endl << "podaj liczby ktore chcesz odjac: " << endl;
+        cin >> a >> b;
+        wynik = a - b;
+        break; 
+        case 3:
+        cout << endl << "podaj liczby ktore chcesz pomnozyc: " << endl;
+        cin >> a >> b;
+        wynik = a * b;
+        break;
+        case 4:
+        cout << endl << "podaj liczby ktore chcesz podzielic: " << endl;
+        cin >> a >> b;
+        wynik = a/b;
+        break;
+        case 5:
+        cout << endl << "podaj liczby ktore chcesz zpierwiastkowac: " << endl;
+        cout<<"Podaj liczbę ";
+	    cin>>a;
+	    cout<<sqrt(a)<<endl;
+        
+        break;
+        case 6:
+      
+        cout<<"Podaj podstawę i wykładnik ";
+	    cin>>a>>b;
+	    cout<<a<<" do potęgi "<<b<<" wynosi "<<pow(a, b)<<endl;
+        
+        
+        
+        
+}
+        cout<< "Wynik działania wynosi " << wynik << endl;
+        
+        return 0;}
+        
+
