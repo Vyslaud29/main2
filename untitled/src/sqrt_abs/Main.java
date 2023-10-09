@@ -77,6 +77,8 @@ package sqrt_abs;//package sqrt_abs;
 //        System.out.println(imie);
 
 
+import java.sql.SQLOutput;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -93,7 +95,6 @@ public class Main {
         System.out.println("5. Potęgowanie");
         System.out.println("6. Pierwiastkowanie");
         System.out.println("7. Modulo");
-
 
 
         int wybor = scanner.nextInt();
@@ -120,7 +121,7 @@ public class Main {
                     scanner.close();
                     return;
                 }
-                wynik = dzielenie(a,b);
+                wynik = dzielenie(a, b);
                 break;
             case 5:
                 wynik = potegowanie(Math.pow(a, b), a, b);
@@ -129,18 +130,21 @@ public class Main {
                 wynik = pierwiastkowanie(Math.sqrt(a), a);
                 break;
             case 7:
-                wynik = modulo(a,b);
+                wynik = modulo(a, b);
                 break;
+
+            default:
+
+                System.out.println("Błąd operacji. Spróbuj ponownie");
+
+                continue;
+
+
         }
 
-        System.out.println("wynik wynosi: " + wynik);
-        scanner.close();
 
-
-
-
-
-
+    }
+    private static void performOperation(String wybor, Scanner scanner) {
     }
 
     private static double modulo(double a, double b) {
