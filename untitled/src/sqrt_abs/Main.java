@@ -77,7 +77,6 @@ package sqrt_abs;//package sqrt_abs;
 //        System.out.println(imie);
 
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -124,10 +123,10 @@ public class Main {
                 wynik = dzielenie(a,b);
                 break;
             case 5:
-                wynik = potegowanie(Math.pow(a, b));
+                wynik = potegowanie(Math.pow(a, b), a, b);
                 break;
             case 6:
-                wynik = pierwiastkowanie(Math.sqrt(a));
+                wynik = pierwiastkowanie(Math.sqrt(a), a);
                 break;
             case 7:
                 wynik = modulo(a,b);
@@ -148,23 +147,27 @@ public class Main {
         return a%b;
     };
 
-    private static double pierwiastkowanie(double sqrt) {
+    private static double pierwiastkowanie(double sqrt, double a) {
         return Math.sqrt(a);
     };
 
-    private static double potegowanie(double pow) {
+    private static double potegowanie(double pow, double a, double b) {
        return Math.pow(a, b);
     }
 
-    private static double dzielenie(double a, double b) {return a / b;
+    private static double dzielenie(double a, double b) {
+        return a / b;
     }
 
-    private static double mnozenie(double a, double b) {return a * b;
+    private static double mnozenie(double a, double b) {
+        return a * b;
     }
 
-    private static double odejmowanie(double a, double b) {return a - b;
+    private static double odejmowanie(double a, double b) {
+        return a - b;
     }
 
-    private static double dodawanie(double a, double b) {return a + b;
+    private static double dodawanie(double a, double b) {
+        return a + b;
     }
 }
